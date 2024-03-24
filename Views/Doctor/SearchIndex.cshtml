@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DoctorPatient.Models.DoctorModel>
+
+@{
+    ViewBag.Title = "Search Doctors";
+}
+
+<h2>Search Doctors</h2>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+<p>
+<p>
+    @using (Html.BeginForm("Index", "Doctor", FormMethod.Get))
+    {
+        <div class="row">
+            <div class="col-md-4">
+                Title: @Html.TextBox("SearchString", "", new { placeholder = "Doctor's Name or Dept" })
+            </div>
+            <div class="col-md-4">
+                Department: @Html.DropDownList("docDept", "All")
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </div>       
+    }
+</p>
+
+
+
