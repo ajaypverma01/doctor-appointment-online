@@ -1,4 +1,5 @@
 ﻿using DoctorPatient.Infrastructure;
+using DoctorPatient.Validations;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -65,6 +66,8 @@ namespace DoctorPatient.Models
         [Required]
         [StringLength(60, MinimumLength = 7)]
         [Display(Name = "HCL Email ID")]
+        [EmailAddress(ErrorMessage = "Please enter valid email address")]
+        [DomainValidation(ErrorMessage = "Please enter valid hcl email address")]
         public string Email { get; set; }
 
         [Required]

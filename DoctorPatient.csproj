@@ -311,7 +311,6 @@
     <Compile Include="Controllers\RegisteredUsersController.cs" />
     <Compile Include="Email\EmailBody.cs" />
     <Compile Include="Email\EmailSender.cs" />
-    <Compile Include="Email\EmailWebJob.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -325,6 +324,7 @@
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\IdentityManager.cs" />
     <Compile Include="Models\MyTimeBlockExtention.cs" />
+    <Compile Include="Validations\DomainValidation.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\AppointmentModel.cs" />
     <Compile Include="Models\DoctorModel.cs" />
